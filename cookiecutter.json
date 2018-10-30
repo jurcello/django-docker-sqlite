@@ -1,4 +1,5 @@
 {
+  "cookiecutter.directory_name": "directory",
   "cookiecutter.django_secretkey": "Django secret key",
   "cookiecutter.django_projectname": "Django project name",
   "cookiecutter.django_environment": "production",
