@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  web:
+    build:
+      dockerfile: ./docker/python/Dockerfile
+      context: ./
+    expose:
+      - 8000
+    restart: always
+    volumes:
+      - database:/databases
+      - media:/media
+    environment:
+      SECRET_KEY: {{ cookiecutter.django_secretkey }}
+      DJANGO_SETTINGS_MODULE: {{ cookiecutter.django_projectname }}.settings.{{ cookiecutter.django_environment }}
+  nginx:
+    build:
+      dockerfile: ./docker/nginx/Dockerfile
+      context: ./
+    restart: always
+    links:
+      - web
+    expose:
+      - 80
+    depends_on:
+      - web
+    volumes:
+      - media:/media
+    environment:
+      VIRTUAL_HOST: '{{ cookiecutter.nginx_virtual_host }}'
+      LETSENCRYPT_HOST: '{{ cookiecutter.nginx_letsencrypt_host }}'
+      LETSENCRYPT_EMAIL: '{{ cookiecutter.nginx_letsenrypt_email }}'
+
+volumes:
+  database:
+  media:
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
