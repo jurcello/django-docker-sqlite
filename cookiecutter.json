@@ -6,6 +6,5 @@
   "cookiecutter.nginx_letsencrypt_host": "example.com, www.example.com",
   "cookiecutter.nginx_letsenrypt_email": "info@example.com",
   "cookiecutter.nginx_server_name": ".example.com www.example.com",
-  "cookiecutter.nginx_to_www_redirect": "example.com",
-
+  "cookiecutter.nginx_to_www_redirect": "example.com"
 }
