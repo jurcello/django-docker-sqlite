@@ -1,11 +1,11 @@
 {
-  "cookiecutter.directory_name": "directory",
-  "cookiecutter.django_secretkey": "Django secret key",
-  "cookiecutter.django_projectname": "Django project name",
-  "cookiecutter.django_environment": "production",
-  "cookiecutter.nginx_virtual_host": "example.com, www.example.com",
-  "cookiecutter.nginx_letsencrypt_host": "example.com, www.example.com",
-  "cookiecutter.nginx_letsenrypt_email": "info@example.com",
-  "cookiecutter.nginx_server_name": ".example.com www.example.com",
-  "cookiecutter.nginx_to_www_redirect": "example.com"
+  "directory_name": "directory",
+  "django_projectname": "Django project name",
+  "django_secretkey": "Django secret key",
+  "django_environment": "production",
+  "nginx_virtual_host": "example.com, www.example.com",
+  "nginx_letsencrypt_host": "example.com, www.example.com",
+  "nginx_letsenrypt_email": "info@example.com",
+  "nginx_server_name": ".example.com www.example.com",
+  "nginx_to_www_redirect": "example.com"
 }
